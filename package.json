@@ -1,0 +1,12 @@
+{
+  "name": "Image-editor",
+  "version": "1.0.0",
+  "main": "app.js",
+  "repository": "git@github.com:kacper-wisniewski/Image-editor.git",
+  "author": "Kacper Wiśniewski <kaka1341@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "6.5.0",
+    "jimp": "0.6.4"
+  }
+}
