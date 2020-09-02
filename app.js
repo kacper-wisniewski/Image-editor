@@ -106,18 +106,14 @@ const prepareOutputFilename = (inputName) => {
 
 const editImage = async function(inputFile, outputFile, editType) {
   try {
-
-    if(editType === 'make image brighter') {
-      const image = await Jimp.read(inputFile);
+  const image = await Jimp.read(inputFile);
+    if(editType === 'make image brighter') {  
       await image.brightness(0.1).quality(100).writeAsync(outputFile);
     } else if(editType === 'increase contrast') {
-      const image = await Jimp.read(inputFile);
       await image.contrast(0.1).quality(100).writeAsync(outputFile);
     } else if(editType === 'make image b&w') {
-      const image = await Jimp.read(inputFile);
       await image.greyscale().quality(100).writeAsync(outputFile);
     } else {
-      const image = await Jimp.read(inputFile);
       await image.invert().quality(100).writeAsync(outputFile);
     }
 
